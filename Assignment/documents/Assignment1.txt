@@ -1,24 +1,29 @@
 1.
-A client side language is one which runs as a computer program on a web browser.
+A client side language is one which runs as a program in a web browser.
 A server side language is one which runs on the web server.
+
 2.
-A variable holds data or a function.
+A variable is a way to store data in Javascript. In Javascript a variable can also store a function.
 testHtml is type string.
 totalCorrect is type number.
-The type of a variable determine how the variable can be used. Certain functions and operations can only be performed on certain datatypes. For example 
+The type of a variable determine how the variable can be used. Certain functions and operations can only be performed on certain datatypes. For example arithmetic can only be performed on numbers.
+
 3.
 The data type of variables in a dynamically typed language are determined as the variable is assigned a value while the program is running, and the type can change as different values are assigned to a variable.
 A statically typed language has variables whose type needs to be explicitly set in the code, or can be implicitly determined by the compiler, before the program is run. Examples of statically typed languages are C, Java, C#.
+
 4.
 + and * are examples of an operator;
 (a + b) * c and a + b * c are examples of an expression;
 The values stored in variables result1 and result2 are different because the use of parentheses, that change the precedence of the + and * operators, so that in the first example the * operator takes precedence over the + operator, while in the second example the + operator takes precedence over the * operator.
+
 5.
 When the + operator is used if the two expressions (to the left and right of the +) are strings then the two strings are concatenated.
 When the + operator is used if the two expressions (to the left and right of the +) are numbers then the two numbers are added together.
 When the + operator is used if one of the expressions being added is a string and the other expression is a number, then the number is converted to a string and the the two expressions are concatenated.
 So, as q can been set to a number - the expression "ans" + q - results in q being converted to a string - and string concatenation takes place.
 In the expression q+1 - since both q and 1 are numbers - addition takes place.
+
 6.
 ...
  <head lang="en">
@@ -31,6 +36,7 @@ In the expression q+1 - since both q and 1 are numbers - addition takes place.
 ...
  <body onload="showQuestions()">
 ...
+
 7.
 A function definition...
 function showQuestions() {
@@ -66,10 +72,13 @@ A function call...
 8.
 A local variable is a variable defined in a function with var , and is only accessible from within the function (only has scope within the function).
 If the variable was defined outside the function the variable would be a global variable (with global scope) and would be accessible from anywhere.
+
 9.
 An object in Javascript is a collection of properties and methods.
+
 10.
 The properties of each object in the questions array are text (which is a string), answers (which is an array of strings) and correct (which is a number).
+
 11.
 ...
    for (var i=0;i<ans.length;i++) {
@@ -80,26 +89,36 @@ The properties of each object in the questions array are text (which is a string
        }
    }
 ...
+
 12.
 ...
 var resultsHtml = "You got " + nCorrect + " correct out of " + nQuestions + " questions.";
 var rDiv = document.getElementById("results");
 rDiv.innerHTML = resultsHtml;
 ...
+
 13.
 The purpose of a form in a web application is to collect data from the user and send it back to the server. It provides a variety of input fields types (text box, radio buttons, drop down list, etc) which the user can choose/enter data into, which is then sent back to the server for processing.
+
 14.
+  ...
   <form>
       Enter your name here: <input type="text" name="NameOfQuizee"></input>
   </form>
+  ...
+...
 function markTest() {
 if (document.getElementsByName("NameOfQuizee")[0].value==="") {
     alert("name is missing! Please enter name");
     return;
 }
 ...
+
 15.
-A cookie is used by a web application to store data in one session (or use) of the web application. Which can be retrieved in a subsequent use of the web application.
+A cookie is used by a web application to store data in a web browser. This data can be retrieved in a subsequent use of the web application.
+
 16.
-A function or variable would need to be declared globally to be accessed .
+Making variables or functions global may help with accessibility from frames or sub-windows.
+
 17.
+Data can be stored locally in Javascript by using global variables. Arrays of more sophisticated data structures could be construted to store data. Cookies can be used to store data for later retrieval in the browser.
